@@ -5,5 +5,5 @@ function calculateAverage(num1,num2) {
     return (num1 + num2) / 2;
     
   } 
-  console.log(calculateAverage(5, 10)); 
-  console.log(calculateAverage(2, 8));
+  calculateAverage(5, 10); 
+  calculateAverage(2, 8);
