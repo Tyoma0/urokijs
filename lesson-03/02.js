@@ -6,3 +6,4 @@ function isEven(num) {
     return num % 2 === 0;
 }
 isEven(1)
+isEven(2)

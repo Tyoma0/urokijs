@@ -6,4 +6,4 @@ function calculateAverage(num1,num2) {
     
   } 
   calculateAverage(5, 10); 
-  calculateAverage(2, 8);
+  
