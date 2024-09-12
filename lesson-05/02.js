@@ -35,10 +35,10 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(galleryfat,artwork, artistInfo) {
+function updateGallery(galleryObj,artwork, artistInfo) {
  
-  if (galleryfat.hasOwnProperty(artwork)) {
-    galleryfat[artwork] = artistInfo;
+  if (galleryobj.hasOwnProperty(artwork)) {
+    galleryObj[artwork] = artistInfo;
   } else{
     galleryObj[artwork] = artistInfo;
   }
