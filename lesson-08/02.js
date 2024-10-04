@@ -40,7 +40,7 @@ startButton.addEventListener('click', () => {
     startCount();
 }
   // your code
-})
+},4000)
 
 cancelButton.addEventListener('click', () => {
   // your code if (isTimerStarted) {
