@@ -15,7 +15,7 @@
 */
 
 const PETS = [
-  { id: 'cat', title: '🐱' },
+  { id: 'cat', title: '🐱'  },
   { id: 'dog', title: '🐶' },
   { id: 'parrot', title: '🦜' },
   { id: 'fish', title: '🐠' },
@@ -68,3 +68,18 @@ clearCartButton.addEventListener('click', function () {
 })
 
 // Твой код:
+petShop.addEventListener('click', (event)=> {
+  const target = event.target;
+  if (target.classList.contains('pet')) {
+    const petId = target.id;
+    if (cart.length<3) {
+      cart.push(petId);
+      updateCartDisplay();
+    }  else {
+    messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+    } 
+  }  
+
+  
+});
+console.log(PETS);
