@@ -25,48 +25,43 @@
 - 🧙‍♂️ Для выполнения этого задания нужно познакомиться с браузерными функциями setInterval (https://doka.guide/js/setinterval/) и clearInterval(https://doka.guide/js/clearinterval/). Они очень похоже на setTimeout и clearTimeout.
  */
 
-// const startButton = document.getElementById('start')
-// const cancelButton = document.getElementById('cancel')
-// const countdownDisplay = document.getElementById('countdown')
 
-// let isTimerStarted = false
-// let timerId
+// const startButton = document.getElementById('start');
+// const cancelButton = document.getElementById('cancel');
+// const countdownDisplay = document.getElementById('countdown');
+
+// let isTimerStarted = false;
+// let timerId;
 
 // startButton.addEventListener('click', () => {
-  
 //   if (!isTimerStarted) {
-    
 //     countdownDisplay.textContent = '3';
 //     isTimerStarted = true;
 //     startCount();
-// }
-//   // your code
-// })
+//   }
+// });
 
 // cancelButton.addEventListener('click', () => {
-//   // your code if (isTimerStarted) {  
-//     if (isTimerStarted) {
-//       clearInterval(timerId);
-//       countdownDisplay.textContent = 'Отменено';
-//       isTimerStarted = false;
-//     }
-// })
-// function startCount(){
+//   if (isTimerStarted) {
+//     clearInterval(timerId);
+//     countdownDisplay.textContent = 'Отменено';
+//     isTimerStarted = false;
+//   }
+// });
+
+// function startCount() {
 //   let counter = 3;
 //   if (isTimerStarted) {
-//     timerId = setInterval(() =>{
-//       if ( counter <= 0){
-//         clearInterval(timerId)
-//         countdownDisplay.textContent = '🚀'
-//       } else{ 
-//         countdownDisplay.textContent = counter--
+//     timerId = setInterval(() => {
+//       if (counter === 0) {
+//         clearInterval(timerId);
+//         countdownDisplay.textContent = '🚀';
+//       } else {
+//         countdownDisplay.textContent = counter--;
 //       }
-//     }, 1000)
-  
+//     }, 1000);
 //   }
-  
 // }
-
 const startButton = document.getElementById('start');
 const cancelButton = document.getElementById('cancel');
 const countdownDisplay = document.getElementById('countdown');
@@ -78,7 +73,7 @@ startButton.addEventListener('click', () => {
   if (!isTimerStarted) {
     countdownDisplay.textContent = '3';
     isTimerStarted = true;
-    startCount();
+    startCount(3); 
   }
 });
 
@@ -90,16 +85,18 @@ cancelButton.addEventListener('click', () => {
   }
 });
 
-function startCount() {
-  let counter = 3;
+function startCount(counter) {
   if (isTimerStarted) {
     timerId = setInterval(() => {
       if (counter === 0) {
         clearInterval(timerId);
         countdownDisplay.textContent = '🚀';
+        isTimerStarted = false; 
       } else {
-        countdownDisplay.textContent = counter--;
+        countdownDisplay.textContent = counter;
+        counter--; 
       }
     }, 1000);
   }
 }
+
