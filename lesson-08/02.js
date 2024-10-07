@@ -68,12 +68,14 @@ const countdownDisplay = document.getElementById('countdown');
 
 let isTimerStarted = false;
 let timerId;
+let counter; 
 
 startButton.addEventListener('click', () => {
   if (!isTimerStarted) {
     countdownDisplay.textContent = '3';
     isTimerStarted = true;
-    startCount(3); 
+    counter = 3; 
+    startCount();
   }
 });
 
@@ -85,7 +87,7 @@ cancelButton.addEventListener('click', () => {
   }
 });
 
-function startCount(counter) {
+function startCount() {
   if (isTimerStarted) {
     timerId = setInterval(() => {
       if (counter === 0) {
