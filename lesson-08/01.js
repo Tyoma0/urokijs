@@ -65,7 +65,7 @@ function updateCartDisplay() {
 clearCartButton.addEventListener('click', function () {
   cart.length = 0
   updateCartDisplay()
-})
+}),
 
 // Твой код:
 petShop.addEventListener('click', (event)=> {
